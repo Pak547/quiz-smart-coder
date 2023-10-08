@@ -1,0 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Courier New', Courier, monospace;
+}
+:root{
+  --black: #111;
+  --white: #fff;
+  --grey: #bbb;
+}
+
+body{
+  background-color: var(--black)
+}
+
+.container {
+  background-color: var(--white);
+  max-width: 700px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.container h1 {
+  font-size: 35px;
+  font-weight: 30px;
+  border-bottom: 50px;
+}
+
+.container h2 {
+  font-size: 24px;
+  font-weight: 20px;
+  margin: 15px;
+  
+}
+
+button {
+  display:flex;
+  cursor: pointer;
+  align-items: left;
+}
