@@ -18,3 +18,36 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 */
+const startBtn = document.querySelector('start-btn')
+const timer = document.querySelector(".time");
+const main = document.getElementById("main");
+let secondsLeft = 120;
+
+startBtn.onclick = () => {
+    quizSection.classList.add('active');
+}
+function setTime() {
+    // Sets interval in variable
+    var timerInterval = setInterval(function() {
+      secondsLeft--;
+      timeEl.textContent = secondsLeft + "Time: ";
+  
+      if(secondsLeft === 0) {
+        // Stops execution of action at set interval
+        clearInterval(timerInterval);
+        // Calls function to create and append image
+        sendMessage("Time's Up");
+      }
+  
+    }, 1000);
+}
+    // Function to create and append colorsplosion image
+function sendMessage() {
+    timer.textContent = " ";
+    const  = document.createElement("");
+    .setAttribute("", "");
+    .appendChild();
+  
+  }
+
+  setTime()
