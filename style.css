@@ -4,6 +4,7 @@
   box-sizing:  border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 :root{
   --black: #111;
   --white: #fff;
@@ -11,7 +12,7 @@
   --neonpink:  rgb(189, 4, 203);
   --neonblue:  rgb(40, 86, 193);
 }
-
+/*All the header css located here*/
 header {
   padding: 20px 5%;
   background: transparent;
@@ -30,27 +31,36 @@ header h1{
   float: right;
  }
 
-.backPic {
+.main {
   background: url(assets/images/4882341.jpg) no-repeat;
   min-width: 100vh;
-  background-size: cover;
   background-position: center;
+  transition: .3s ease;
 }
-
-.content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+/*The css for the text in the middle of the screen*/
 
 .container {
-  height: 100vh;
+  height: 94.2vh;
+}
+
+.home {
+  height: 85vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.content {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home .disabled {
+  display: none;
+}
 
 .content h2 {
   font-size: 50px;
@@ -62,7 +72,7 @@ header h1{
 
 .content p {
   color:white;
-  font-size:16px;
+  font-size:18px;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -88,3 +98,21 @@ header h1{
   box-shadow: 0 0 10px var(--neonblue);
 }
 
+/*CSS for quiz section*/
+.timer {
+  font-size: 22px;
+  float: right;
+}
+
+.timer .active {
+  visibility: show;
+}
+
+.quizSection {
+  left: 0;
+  transition: ease-in-out 1s;
+}
+
+.quizSection.active {
+  transition: ease-in-out 1s;
+}

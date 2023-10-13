@@ -1,10 +1,3 @@
-// write interval 
-// prmpt
-// for loop
-// function incorrectly -5
-// reach 0 = game over
-// when game is over then you can log score local storage
-//
 /*
 GIVEN I am taking a code quiz
 WHEN I click the start button
@@ -18,36 +11,30 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 */
-const startBtn = document.querySelector('start-btn')
-const timer = document.querySelector(".time");
-const main = document.getElementById("main");
-let secondsLeft = 120;
+const startBtn = document.querySelector(".start-btn");
+const timer = document.querySelector(".timer");
+const leaderBoard = document.querySelector(".leaderBoard");
+const quiz = document.querySelector(".quizSection");
+const homePage = document.querySelector(".home");
 
-startBtn.onclick = () => {
-    quizSection.classList.add('active');
-}
+let secondsLeft = 80;
+
 function setTime() {
     // Sets interval in variable
     var timerInterval = setInterval(function() {
       secondsLeft--;
-      timeEl.textContent = secondsLeft + "Time: ";
-  
+      timer.innerHTML = "Time: " + secondsLeft;
       if(secondsLeft === 0) {
         // Stops execution of action at set interval
         clearInterval(timerInterval);
-        // Calls function to create and append image
-        sendMessage("Time's Up");
+        alert("Failed");
       }
-  
     }, 1000);
 }
-    // Function to create and append colorsplosion image
-function sendMessage() {
-    timer.textContent = " ";
-    const  = document.createElement("");
-    .setAttribute("", "");
-    .appendChild();
-  
-  }
 
-  setTime()
+startBtn.onclick = () => {
+  quiz.classList.add('active');
+  timer.classList.add('active');
+  homePage.classList.add('disabled');
+  setTime();
+}

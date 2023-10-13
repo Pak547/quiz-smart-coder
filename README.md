@@ -7,3 +7,6 @@ Image by <a href="https://www.freepik.com/free-vector/gradient-geometric-wallpap
 
 Text shadow
 https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+
+z-index
+https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
