@@ -9,8 +9,8 @@
   --black: #111;
   --white: #fff;
   --grey: #bbb;
-  --neonpink:  rgb(189, 4, 203);
-  --neonblue:  rgb(40, 86, 193);
+  --neonpink: rgb(189, 4, 203);
+  --neonblue: rgb(40, 86, 193);
 }
 /*All the header css located here*/
 header {
@@ -24,18 +24,16 @@ header h1{
   font-weight: 700;
   text-shadow: 0 0 10px var(--neonpink);
 }
- header h4 {
-  font-size: 18px;
-  font-weight: 500;
-  display: flex;
-  float: right;
- }
 
 .main {
   background: url(assets/images/4882341.jpg) no-repeat;
   min-width: 100vh;
   background-position: center;
   transition: .3s ease;
+}
+
+.main .disabled {
+  display: none;
 }
 /*The css for the text in the middle of the screen*/
 
@@ -56,10 +54,6 @@ header h1{
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-.home .disabled {
-  display: none;
 }
 
 .content h2 {
@@ -104,15 +98,10 @@ header h1{
   float: right;
 }
 
-.timer .active {
-  visibility: show;
-}
-
 .quizSection {
   left: 0;
-  transition: ease-in-out 1s;
 }
 
-.quizSection.active {
-  transition: ease-in-out 1s;
+.quizSection .active{
+  visibility: show;
 }

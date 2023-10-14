@@ -72,4 +72,3 @@ const questionArray = [
 }
 ]
 
-goNext.on("click",)

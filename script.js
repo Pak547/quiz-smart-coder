@@ -11,11 +11,14 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 */
+
 const startBtn = document.querySelector(".start-btn");
 const timer = document.querySelector(".timer");
 const leaderBoard = document.querySelector(".leaderBoard");
 const quiz = document.querySelector(".quizSection");
 const homePage = document.querySelector(".home");
+const content = document.querySelector(".content");
+const root = document.querySelector(".main");
 
 let secondsLeft = 80;
 
@@ -36,5 +39,6 @@ startBtn.onclick = () => {
   quiz.classList.add('active');
   timer.classList.add('active');
   homePage.classList.add('disabled');
+  root.classList.add('disabled');
   setTime();
 }
