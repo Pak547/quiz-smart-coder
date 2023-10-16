@@ -27,22 +27,34 @@ header h1{
 
 .main {
   background: url(assets/images/4882341.jpg) no-repeat;
-  min-width: 100vh;
+  background-size: cover;
   background-position: center;
-  transition: .3s ease;
+  min-width: 100vh;
 }
 
-.main .disabled {
-  display: none;
+.main .disabled{
+  z-index: -50;
 }
+
+
 /*The css for the text in the middle of the screen*/
-
+body {
+  color: #fff;
+  overflow: hidden;
+}
 .container {
-  height: 94.2vh;
+  display: flex;
+  height: 100vh;
+  width: 200%;
+}
+
+.container .active {
+  z-index: 10;
 }
 
 .home {
-  height: 85vh;
+  position: relative;
+  left: -50%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -56,7 +68,7 @@ header h1{
   flex-direction: column;
 }
 
-.content h2 {
+.content h1 {
   font-size: 50px;
   font-weight: 600;
   color: white;
@@ -94,14 +106,113 @@ header h1{
 
 /*CSS for quiz section*/
 .timer {
-  font-size: 22px;
-  float: right;
+  font-size: 18px;
 }
 
 .quizSection {
-  left: 0;
+  background-color: var(--neonblue);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -40;
+}
+.quizSection .active{
+  z-index: 50;
+} 
+
+.quizSection .quizContainer {
+  position: relative;
+  width: 1000px; 
 }
 
-.quizSection .active{
-  visibility: show;
+.quizContainer  h2{
+  font-size: 32px;
+  text-align: center;
+  background: linear-gradient(45deg, transparent, var(--neonpink), transparent);
+  border-radius: 6px;
+}
+
+.quizContainer .quizHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--neonpink);
+  margin-bottom: 30px;
+}
+
+.quizHeader span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.quizHeader .score {
+  background: var(--neonpink);
+  border-radius: 3px;
+  padding: 7px;
+}
+
+.quizContainer .questionText {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.optionList .option {
+  width:100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid var(--grey);
+  border-radius: 3px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.optionList .option:hover {
+  background: var(--grey);
+  border-color: var(--grey);
+}
+
+.emptyDiv .correct {
+  background: var(--black);
+  color: lightgreen;
+  border-color: lightgreen;
+}
+
+.emptyDiv .wrong {
+  background: var(--black);
+  color: red;
+  border-color: red;
+}
+.next {
+  width:100px;
+  height: 45px;
+  background: var(--neonpink);
+  border: 2px solid var(--white);
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  /*pointer-events: none;*/
+  transition: .5s;
+}
+
+.next:hover {
+  filter: brightness(80%);
+}
+@media (max-width:768px){
+  body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
 }
