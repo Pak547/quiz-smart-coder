@@ -1,4 +1,22 @@
 
+# <Quiz-Smart-Coder>
+
+## Description
+
+
+A javascript quiz incorporating DOM, local storage, and some jquery. Used a lot of javascript logic.
+This project tests your knowledge of javascript.
+With this project I deepened my understanding on the DOM and manipulated its elements by adding classes and inserting text into empty divs.
+
+## Usage
+
+Click the start button to start the quiz
+![Alt text](<assets/images/Screenshot 2023-10-16 221909.png>)
+
+
+Use the next button to navigate to the next array of questions and potential answers
+![Alt text](<assets/images/Screenshot 2023-10-16 222157.png>)
+
 
 ## Attributions
 Background pic

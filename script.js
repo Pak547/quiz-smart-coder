@@ -104,7 +104,7 @@ function setTime() {
 }
 
 // function to show each question and potential answers
-function showQuestions(index,) {
+function showQuestions(index) {
   let questionCount = 0;
   questionCount++; // Move the increment statement here
   const questionText = document.querySelector('.questionText');
@@ -118,11 +118,11 @@ function showQuestions(index,) {
   putQuestionsHere.innerHTML = optionTag;
 }
 
-
+// decides what to do with the selected answer
 function optionSelected(answer) {
   let userAnswer = answer.textContent;
   let correctAnswer = questionArray[questionCount].answer;
-  let allOptions = optionList.children.length;
+  let allOptions = putQuestionsHere.length[i];
 
   if(userAnswer == correctAnswer) {
     answer.classList.add('correct');
@@ -156,11 +156,11 @@ function optionSelected(answer) {
       }
     } else {
       // Quiz is finished, handle end of quiz logic
-      return leaderBoard;
+      return homePage;
     }
   }, 1000);
 }
-
+// function to select an option
 function selectOption() {
   for (let i = 0; i < options.length; i++) {
     options[i].addEventListener('click', function() {
