@@ -135,8 +135,8 @@ function optionSelected(answer) {
 
     // if answer incorrect auto select correct answer
     for(let i=0; i< allOptions; i++) {
-      if (optionList.children[i].textContent == correctAnswer){
-        optionList.children[i].setAttribute('class','option correct');
+      if (putQuestionsHere.children[i].textContent == correctAnswer){
+        putQuestionsHere.children[i].setAttribute('class','option correct');
       }
     }
   }
@@ -161,53 +161,6 @@ function optionSelected(answer) {
   }, 1000);
 }
 
-
-/*
-function optionSelected(selectedOption) {
-  // Get the selected option's data-number attribute
-  const selectedOptionNumber = selectedOption.getAttribute('data-number');
-
-  // Compare the selected option with the correct answer
-  if (selectedOptionNumber === questionArray[questionCount].answer) {
-    // The user selected the correct answer
-    // increase score if correct and add class correct
-    selectedOption.classList.add('correct');
-    scoreCount++;
-    scoreText.textContent = `Score: ${scoreCount}`;
-    console.log("correct");
-  } else {
-    // The user selected the wrong answer
-    // assign 5 second penalty
-    selectedOption.classList.add('wrong');
-    secondsLeft -= 5;
-    console.log("wrong");
-  }
-  for (let i=0; i <allOptions; i++) {
-    if (putQuestionsHere.children[i].textContent == correctAnswer){
-      putQuestionsHere.children[i].setAttribute('class', 'option correct');
-    }
-  }
-  // Disable selecting options after selection temporarily
-  for (let i = 0; i < options.length; i++) {
-    options[i].classList.add('disabled');
-  }
-
-  // Move to the next question after a delay
-  setTimeout(() => {
-    questionCount++;
-    if (questionCount < questionArray.length) {
-      showQuestions(questionCount);
-      // Reset option styles
-      for (let i = 0; i < options.length; i++) {
-        options[i].classList.remove('correct', 'wrong', 'disabled');
-      }
-    } else {
-      // Quiz is finished, handle end of quiz logic
-      return leaderBoard;
-    }
-  }, 1000);
-}
-*/
 function selectOption() {
   for (let i = 0; i < options.length; i++) {
     options[i].addEventListener('click', function() {
