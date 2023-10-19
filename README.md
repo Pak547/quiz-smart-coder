@@ -17,6 +17,13 @@ Click the start button to start the quiz
 Use the next button to navigate to the next array of questions and potential answers
 ![Alt text](<assets/images/Screenshot 2023-10-16 222157.png>)
 
+#Credit
+Ask BCS AI to help me bug fix error codes.
+
+3 Youtube video tutorials
+https://youtu.be/Vp8x8-reqZA?si=yoorar-ncs3qiYG7
+https://youtu.be/f4fB9Xg2JEY?si=mHcS1e-PNIVR4QSA
+https://youtu.be/WiLTsxjCmWQ?si=PvNfAwpIWbxqUwhp
 
 ## Attributions
 Background pic
